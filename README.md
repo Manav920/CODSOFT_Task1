@@ -2,106 +2,126 @@
 
 ## Project Overview
 
-This project uses Machine Learning to predict whether a passenger survived the Titanic disaster based on passenger information such as age, gender, ticket class, fare, and family details.
+This project is about using computers to guess if someone survived the disaster. We look at things like how old they were if they were a man or woman what class ticket they had, how much they paid for the ticket and details about their family.
 
-The objective is to build a binary classification model that predicts:
+The goal is to make a model that says:
 
-* **1** → Survived
-* **0** → Did Not Survive
+* **1** → They survived
+
+* **0** → They did not survive
 
 ## Dataset
 
-The project uses the famous Titanic dataset containing passenger information including:
+We use a list of people who were on the Titanic. The list has things like:
 
-* Passenger Class (Pclass)
-* Sex
-* Age
-* Fare
-* Number of Siblings/Spouses (SibSp)
-* Number of Parents/Children (Parch)
-* Embarked Port
-* Survival Status (Target Variable)
+* What class they were in (Pclass)
+
+* If they were a man or woman (Sex)
+
+* How old they were (Age)
+
+* How much they paid for their ticket (Fare)
+
+* How brothers or sisters they had with them (SibSp)
+
+* How parents or kids they had with them (Parch)
+
+* Where they got on the boat (Embarked Port)
+
+* If they survived (which we are trying to guess)
 
 ## Technologies Used
 
 * Python
+
 * Pandas
+
 * NumPy
+
 * Matplotlib
+
 * Seaborn
+
 * Scikit-Learn
+
 * Jupyter Notebook
 
 ## Project Workflow
 
 ### 1. Data Loading
 
-The Titanic dataset is loaded using Pandas and inspected for structure and missing values.
+We load the list into our computer using Pandas. We then look at the list to see what it has. If there are any missing pieces of information.
 
 ### 2. Exploratory Data Analysis (EDA)
 
-Performed various analyses to understand the dataset:
+We do some digging to understand the list:
 
-* Dataset information summary
-* Survival distribution analysis
-* Fare distribution across passenger classes
-* Statistical summaries using pivot tables
-* Correlation analysis using heatmaps
+* We look at a summary of the list
+
+* We see how many people survived
+
+* We see how much people paid across classes
+
+* We make some charts to see how things are related
 
 ### 3. Data Cleaning
 
-The following preprocessing steps were performed:
+We clean up the list:
 
-* Removed unnecessary columns:
+* We get rid of things we don't need:
 
-  * PassengerId
-  * Cabin
-  * Name
-  * Ticket
+* PassengerId
 
-* Handled missing values:
+* Cabin
 
-  * Age → Filled using mean value
-  * Embarked → Filled using mode value
+* Name
+
+* Ticket
+
+* We fix missing information:
+
+* Age → We use the age
+
+* Embarked → We use the common place
 
 ### 4. Feature Engineering
 
-To improve model performance:
+We make the list better for our model:
 
-* Applied logarithmic transformation to the Fare feature to reduce skewness.
-* Converted categorical variables into numerical form using Label Encoding.
+* We change the Fare so its not too skewed
 
-Encoded columns:
+* We turn things like Sex. Embarked into numbers
+
+We change:
 
 * Sex
+
 * Embarked
 
 ### 5. Feature Selection
 
-Features and target variable were separated:
+We separate the list into:
 
-* Features (X)
-* Target (y = Survived)
+* The things we use to make a guess (X)
+
+* What we are trying to guess (y = Survived)
 
 ### 6. Model Training
 
-A Random Forest Classifier was used for prediction.
+We use a tool called a Random Forest Classifier to make our guesses.
 
-The dataset was split into:
+We split our list into:
 
-* 75% Training Data
-* 25% Testing Data
+* 75% for training
+
+* 25% for testing
 
 ### 7. Model Evaluation
 
-Model performance was evaluated using classification accuracy.
+We see how good our model is by seeing how often it gets it right.
 
-**Achieved Accuracy: ~82.8%**
+**We got it right 82.8% of the time**
 
 ## Results
 
-The Random Forest model successfully predicts passenger survival with approximately **82.8% accuracy**, demonstrating the effectiveness of data preprocessing and feature engineering techniques.
-
-##
-
-##
+Our model is pretty good, at guessing if someone survived. It gets it right about **82.8% of the time**. This shows that cleaning up the list and making it better really helped.
